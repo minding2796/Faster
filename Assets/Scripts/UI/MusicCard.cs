@@ -110,5 +110,11 @@ namespace UI
             if (isExpanded) SceneManager.LoadScene("GamePlay");
             else MusicViewManager.Instance.MoveTo(index);
         }
+
+        [VisibleEnum(typeof(CursorType))]
+        public void SetCursor(int type)
+        {
+            CustomCursor.Instance.SetCursor(type);
+        }
     }
 }

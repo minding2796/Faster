@@ -3,4 +3,4 @@ Title: "Canvas on Fire"
 Artist: irisperment (a.k.a. Suno AI)
 BPM: 180~200
 Category: ["AICompose", "All"]
-AvailableDifficulty: ["Easy"]
+AvailableDifficulty: ["Normal"]

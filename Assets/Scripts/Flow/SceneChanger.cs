@@ -9,7 +9,7 @@ namespace Flow
         public void OnAnyKey(InputValue value)
         {
             if ((int)value.Get<float>() != 1) return;
-            SceneManager.LoadScene("SelectMusic");
+            SelectMusic();
         }
 
         public void OnExit(InputValue value)
@@ -20,6 +20,11 @@ namespace Flow
         public void StartGame()
         {
             SceneManager.LoadScene("GamePlay");
+        }
+
+        public void SelectMusic()
+        {
+            SceneManager.LoadScene("SelectMusic");
         }
     }
 }

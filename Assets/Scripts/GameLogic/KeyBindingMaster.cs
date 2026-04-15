@@ -1,3 +1,4 @@
+using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils;
@@ -16,6 +17,7 @@ namespace GameLogic
 
         public void CloseModal()
         {
+            CustomCursor.Instance.SetCursor(0);
             gameObject.SetActive(false);
             Settings.Instance.uiInput.enabled = true;
         }

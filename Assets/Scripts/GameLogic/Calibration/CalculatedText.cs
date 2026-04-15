@@ -1,4 +1,5 @@
 using TMPro;
+using UI;
 using UnityEngine;
 
 namespace GameLogic.Calibration
@@ -28,6 +29,13 @@ namespace GameLogic.Calibration
             text.text = strikethrough
                 ? $"<s>{(offset > 0 ? "+" : "")}{offset:F0}ms</s>"
                 : $"{(offset > 0 ? "+" : "")}{offset:F0}ms";
+        }
+        
+        
+        [VisibleEnum(typeof(CursorType))]
+        public void SetCursor(int type)
+        {
+            CustomCursor.Instance.SetCursor(type);
         }
     }
 }

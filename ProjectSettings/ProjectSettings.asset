@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: ThinkingGames
   productName: Faster
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 8651f93eee7ea744689bf117dfe33ff5, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 0
