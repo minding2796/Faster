@@ -2451,6 +2451,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1426588790}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetCursor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1120637484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7903,6 +7915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.CustomCursor
   destroyOnLoad: 1
+  current: 0
   textures:
   - {fileID: 2800000, guid: 8651f93eee7ea744689bf117dfe33ff5, type: 3}
   - {fileID: 2800000, guid: 8799491715625874abde59405fd61ff0, type: 3}
