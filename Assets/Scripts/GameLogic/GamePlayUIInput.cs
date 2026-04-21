@@ -47,8 +47,11 @@ namespace GameLogic
 
         public void OnRestart(InputValue value)
         {
+            PauseUI.Instance.isPaused = false;
+            PlayManager.Instance.musicSource.UnPause();
+            PauseUI.Instance.animator.ResetControllerState();
             GameStatics.ResetGameData();
-            SceneManager.LoadScene("GamePlay");
+            PlayManager.Instance.RestartGame();
         }
 
         public void OnPause(InputValue value)

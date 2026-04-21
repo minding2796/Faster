@@ -1,4 +1,4 @@
-DifficultyName: Impossible Lv.42
+DifficultyName: Impossible Lv.45
 HitObjects:
 - Lane: 2
   KeySounds: []

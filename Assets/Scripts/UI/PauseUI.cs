@@ -41,8 +41,11 @@ namespace UI
 
         public void Restart()
         {
+            isPaused = false;
+            PlayManager.Instance.musicSource.UnPause();
+            animator.ResetControllerState();
             GameStatics.ResetGameData();
-            SceneManager.LoadScene("GamePlay");
+            PlayManager.Instance.RestartGame();
         }
 
         public void OpenUI()

@@ -11,7 +11,6 @@ namespace Utils
             get
             {
                 if (!_instance) _instance = FindAnyObjectByType<T>();
-                if (!_instance) _instance = new GameObject().AddComponent<T>();
                 return _instance;
             }
         }

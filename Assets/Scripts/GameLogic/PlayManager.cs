@@ -44,6 +44,12 @@ namespace GameLogic
                 GameStatics.Score += GameStatics.RemainingScore;
                 musicSource.Play();
             }
+            
+            if (isStarted && Mathf.Abs(TimeUtils.GetCurrentTime(Time.time) - musicSource.time * 1000f) > 50f)
+            {
+                musicSource.time = TimeUtils.GetCurrentTime(Time.time) / 1000f;
+                return;
+            }
             scoreText.text = $"{GameStatics.Score:0000000}";
             noteSpeedText.text = $"x{GameStatics.NoteSpeed:F1}";
             
@@ -73,6 +79,17 @@ namespace GameLogic
         public void ActiveLane(int line, bool isActive)
         {
             laneSprites[line].enabled = isActive;
+        }
+
+        public void RestartGame()
+        {
+            GameStatics.GameStartTime = Time.time * 1000f;
+            resultCanvas.SetActive(false);
+            musicSource.Stop();
+            isEnded = false;
+            isStarted = false;
+            Lines.Instance.Clear();
+            NoteManager.Instance.noteIndex = 0;
         }
     }
 }

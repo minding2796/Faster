@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UI;
@@ -25,6 +24,15 @@ namespace GameLogic
         public void AddNote(int line, Note note)
         {
             notes[line].AddLast(note);
+        }
+
+        public void Clear()
+        {
+            foreach (var note in notes)
+            {
+                foreach (var o in note) NoteManager.Instance.ReleaseNote(o);
+                note.Clear();
+            }
         }
 
         public void PressLine(int line)

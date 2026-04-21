@@ -34,6 +34,8 @@ namespace GameLogic
         public void ReleaseNote(Note note)
         {
             note.gameObject.SetActive(false);
+            note.noteData.pressed = false;
+            note.noteData.delay = 150f;
             notePool.Enqueue(note);
         }
 

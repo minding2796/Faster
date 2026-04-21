@@ -93,7 +93,7 @@ namespace UI
         public void Restart()
         {
             GameStatics.ResetGameData();
-            SceneManager.LoadScene("GamePlay");
+            PlayManager.Instance.RestartGame();
         }
     }
 }

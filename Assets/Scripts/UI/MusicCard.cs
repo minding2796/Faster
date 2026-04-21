@@ -72,6 +72,20 @@ namespace UI
             UpdateSelection((DifficultyName) difficulty);
         }
 
+        [VisibleEnum(typeof(DifficultyName))]
+        public void Hover(int difficulty)
+        {
+            if (currentDifficulty == (DifficultyName)difficulty) return;
+            (difficultyList[difficulty].transform.parent as RectTransform)!.anchoredPosition = new Vector2(20, 0);
+        }
+
+        [VisibleEnum(typeof(DifficultyName))]
+        public void OutFocus(int difficulty)
+        {
+            if (currentDifficulty == (DifficultyName)difficulty) return;
+            (difficultyList[difficulty].transform.parent as RectTransform)!.anchoredPosition = new Vector2(0, 0);
+        }
+
         public void NextDifficulty(bool isNext = true)
         {
             var currentIndex = Array.IndexOf(musicData.availableDifficulty, currentDifficulty);
