@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26089c9decf2aa54b83e40dac727bbd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flow.SceneChanger
+  exitUI: {fileID: 0}
 --- !u!4 &8322449
 Transform:
   m_ObjectHideFlags: 0
@@ -11667,10 +11668,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8322448}
+      - m_Target: {fileID: 1051219144}
         m_TargetAssemblyTypeName: 
-        m_MethodName: StartGame
-        m_Mode: 1
+        m_MethodName: SetCursor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11679,10 +11680,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1051219144}
+      - m_Target: {fileID: 8322448}
         m_TargetAssemblyTypeName: 
-        m_MethodName: SetCursor
-        m_Mode: 3
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

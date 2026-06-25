@@ -3,4 +3,4 @@ Title: "Spell on Veil"
 Artist: minding2796
 BPM: 230
 Category: ["Original", "All"]
-AvailableDifficulty: ["Impossible"]
+AvailableDifficulty: ["Easy", "Normal", "Hard", "Impossible"]
