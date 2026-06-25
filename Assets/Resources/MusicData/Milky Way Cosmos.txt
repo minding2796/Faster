@@ -1,0 +1,6 @@
+SongPreviewTime: 76.800
+Title: "Milky Way Cosmos"
+Artist: minding2796
+BPM: 60~200
+Category: ["Original", "All"]
+AvailableDifficulty: ["Easy", "Normal", "Hard"]
