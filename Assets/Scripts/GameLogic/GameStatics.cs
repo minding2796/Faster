@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Video;
 using Utils;
 
 namespace GameLogic
@@ -92,6 +93,7 @@ namespace GameLogic
         public string bpm;
         public float previewTime;
         public AudioClip audioClip;
+        public VideoClip videoClip;
         public Category[] category;
         public Sprite cover;
         public DifficultyName[] availableDifficulty;

@@ -1,3 +1,4 @@
+using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,8 @@ namespace Flow
 {
     public class SceneChanger : MonoBehaviour
     {
+        public ExitUI exitUI;
+        
         public void OnAnyKey(InputValue value)
         {
             if ((int)value.Get<float>() != 1) return;
@@ -14,7 +17,15 @@ namespace Flow
 
         public void OnExit(InputValue value)
         {
-            Application.Quit();
+            exitUI.Toggle();
+        }
+
+        public void OnDifficultySelect(InputValue value)
+        {
+            
+            if (!ExitUI.Instance.isShown) return;
+            var v = value.Get<float>();
+            if (v != 0) ExitUI.Instance.SelectButton(v > 0);
         }
 
         public void StartGame()

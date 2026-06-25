@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 using Utils;
 
 namespace GameLogic
@@ -21,6 +22,7 @@ namespace GameLogic
         public bool isStarted;
         public bool isEnded;
         public float startOffset = 3;
+        public VideoPlayer videoSource;
         public AudioSource musicSource;
         public AudioSource effectSource;
         public AudioClip hitSound;
@@ -38,18 +40,20 @@ namespace GameLogic
         private void FixedUpdate()
         {
             musicSource.clip ??= GameStatics.MusicData.audioClip;
+            videoSource.clip ??= GameStatics.MusicData.videoClip;
             if (TimeUtils.GetCurrentTime(Time.time) >= 0 && !isStarted)
             {
                 isStarted = true;
                 GameStatics.Score += GameStatics.RemainingScore;
                 musicSource.Play();
+                videoSource.Play();
             }
             
             if (isStarted && Mathf.Abs(TimeUtils.GetCurrentTime(Time.time) - musicSource.time * 1000f) > 50f)
-            {
                 musicSource.time = TimeUtils.GetCurrentTime(Time.time) / 1000f;
-                return;
-            }
+            if (isStarted && Mathf.Abs(TimeUtils.GetCurrentTime(Time.time) - (float) videoSource.time * 1000f) > 50f)
+                videoSource.time = TimeUtils.GetCurrentTime(Time.time) / 1000f;
+            
             scoreText.text = $"{GameStatics.Score:0000000}";
             noteSpeedText.text = $"x{GameStatics.NoteSpeed:F1}";
             

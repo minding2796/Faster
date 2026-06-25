@@ -10,6 +10,8 @@ namespace Flow
         public VideoPlayer videoPlayer;
         private bool started;
         
+        public void OnClick(InputValue value) => SceneManager.LoadScene("Title");
+        
         public void OnAnyKey(InputValue value)
         {
             if ((int)value.Get<float>() != 1) return;

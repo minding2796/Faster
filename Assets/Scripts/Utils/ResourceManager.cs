@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GameLogic;
 using UnityEngine;
+using UnityEngine.Video;
 using YamlDotNet.Serialization;
 
 namespace Utils
@@ -40,6 +41,7 @@ namespace Utils
                 bpm = o.Bpm,
                 previewTime = o.PreviewTime,
                 audioClip = Resources.Load<AudioClip>($"MusicData/{o.Title}/audio"),
+                videoClip = Resources.Load<VideoClip>($"MusicData/{o.Title}/video"),
                 cover = Resources.Load<Sprite>($"MusicData/{o.Title}/cover"),
                 category = o.Category,
                 availableDifficulty = o.AvailableDifficulty
