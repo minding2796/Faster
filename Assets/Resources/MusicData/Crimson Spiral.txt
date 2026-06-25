@@ -1,0 +1,6 @@
+SongPreviewTime: 70.421
+Title: "Crimson Spiral"
+Artist: irisperment (a.k.a. Suno AI)
+BPM: 190
+Category: ["AICompose", "All"]
+AvailableDifficulty: ["Hard"]

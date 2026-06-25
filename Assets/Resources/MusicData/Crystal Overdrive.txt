@@ -1,0 +1,6 @@
+SongPreviewTime: 179.368
+Title: "Crystal Overdrive"
+Artist: irisperment (a.k.a. Suno AI)
+BPM: 190
+Category: ["AICompose", "All"]
+AvailableDifficulty: ["Hard"]
