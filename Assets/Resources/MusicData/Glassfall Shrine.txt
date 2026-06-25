@@ -1,0 +1,6 @@
+SongPreviewTime: 196.363
+Title: "Glassfall Shrine"
+Artist: irisperment (a.k.a. Suno AI)
+BPM: 187
+Category: ["AICompose", "All"]
+AvailableDifficulty: ["Impossible"]
