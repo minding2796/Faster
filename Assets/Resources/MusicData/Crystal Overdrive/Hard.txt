@@ -1,0 +1,2 @@
+DifficultyName: Hard Lv.??
+HitObjects: []
